@@ -29,7 +29,7 @@ Celloscope gives as an output the estimates for the cell type proportions across
 
 Examplificatory input files can be found in this resposotory, in the `example` directory. 
 
-Please see the manual for the details on how to prepare data and guidance to visualize results.
+Please see the manual for the details on how to prepare data and guidance how to visualize results.
 
 # Repository content
 
