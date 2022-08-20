@@ -16,7 +16,6 @@ Agnieszka Geras, A.Geras[at]mini.pw.edu.pl
 
 Ewa Szczurek, szczurek[at]mimuw.edu.pl
 
-# Packages 
 Celloscope was developed under:
 
 python v3.10.4  
