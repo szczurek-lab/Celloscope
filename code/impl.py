@@ -276,7 +276,7 @@ def calosc(adres_data, adres_results, how_many_chains):
         #address_res_Z =  adress_res_base +"result_Z.csv"
         #address_res_lambda_0 = adress_res_base + "result_lambda_0.csv"
         #address_res_n_cells = adress_res_base   +"result_n_cells.csv"
-        address_res_p_g = adress_res_base   +"result_p_g.csv"
+        #address_res_p_g = adress_res_base   +"result_p_g.csv"
     
         
         #############################################################################
@@ -284,7 +284,7 @@ def calosc(adres_data, adres_results, how_many_chains):
         #############################################################################
         
         C = pd.read_csv(address_data  +   '/C_gs.csv', index_col=0).to_numpy()
-        B = pd.read_csv(address_data  +   '/matB.csv', index_col=0).to_numpy()
+        B = pd.read_csv(address_data  +   '/matB.csv', index_col=0).to_numpy().astype(int)
         xx1, yy1 = np.where(B == 1)   
         xx0, yy0 = np.where(B == 0)
         how_many_each_type = B.sum(axis=1)
@@ -297,6 +297,17 @@ def calosc(adres_data, adres_results, how_many_chains):
         nSpots = C.shape[1]
         nTypes = B.shape[1]
         nGens =  C.shape[0]
+        
+        assert np.all((B==0) | (B==1)), "elements of B should be 0 or 1"
+        assert len(n_cells.shape)==1, "number of cells should be one dimentional vector"
+        assert np.all(n_cells>0), "number of cells should be more than 0"
+        n_cells_int = n_cells.astype(int)
+        assert np.all(n_cells - n_cells_int ==0), "number of cells should be integers"
+        C_int = C.astype(int)
+        assert np.all(C - C_int ==0), "gene expression counts should be integers"
+        assert C.shape[0] == B.shape[0], "number of rows of C should be equal to number of rows of B"
+        assert C.shape[0] == B.shape[0], "number of columns of C should be equal length of number of cells vector"
+        assert burn_in < number_of_iterations, "burn-in should be smaller than number of iterations"
         
         #nr_of_spots_to_follow
         #number_of_entries = nTypes * nSpots
@@ -516,8 +527,8 @@ def calosc(adres_data, adres_results, how_many_chains):
                 h_output = h_output.append(vector_h_curr)
                 over_lambdas_output = over_lambdas_output.append(current_over_lambdas_vector)
                 
-                result_p_g = pd.DataFrame(current_p_g)
-                result_p_g.T.to_csv(address_res_p_g, header=False, index=False, mode="a")
+            #     result_p_g = pd.DataFrame(current_p_g)
+            #     result_p_g.T.to_csv(address_res_p_g, header=False, index=False, mode="a")
                 
                 
             
