@@ -6,6 +6,22 @@ This is the directory containing source code necessary to reproduce analyses pre
 > **Celloscope: a probabilistic model for marker-gene-driven cell type deconvolution in spatial transcriptomics data**  
 > Agnieszka Geras, Shadi Darvish Shafighi, Kacper Domżał, Igor Filipiuk,  Łukasz Rączkowski, Hosein Toosi, Leszek Kaczmarek,  Łukasz Koperski, Jens Lagergren, Dominika Nowis and Ewa Szczurek
 
+The preprint version of the manuscript can be found [here](https://www.biorxiv.org/content/10.1101/2022.05.24.493193v1).
+
+**Question about the implementation and general questions** 
+Agnieszka Geras, A.Geras[at]mini.pw.edu.pl
+
+**Manuscript's corresponding author:**
+Ewa Szczurek, szczurek[at]mimuw.edu.pl
+
+# Packages 
+Celloscope was developed under:
+python v3.10.4
+scipy v1.7.3
+numpy v1.23.1
+pandas v1.4.3
+multiprocess v0.70.12.2
+
 # Basic usage
 Celloscope takes as an input the following files provided in `input_data` directory:
 
