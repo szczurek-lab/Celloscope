@@ -8,7 +8,7 @@ This is the directory containing source code necessary to reproduce analyses pre
 
 The preprint version of the manuscript can be found [here](https://www.biorxiv.org/content/10.1101/2022.05.24.493193v1).
 
-**Questions about the implementation and general questions**
+**Questions about the implementation and general questions:**
 
 Agnieszka Geras, A.Geras[at]mini.pw.edu.pl
 
