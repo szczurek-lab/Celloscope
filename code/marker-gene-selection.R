@@ -1,4 +1,4 @@
-prepate_matrix_B <- function(ST_data, address_candidate, cell_types, lead_genes, tresh_tau, tresh_rho ){
+prepare_matrix_B <- function(ST_data, address_candidate, cell_types, lead_genes, tresh_tau, tresh_rho ){
   nTypes <- length(cell_types)
   list_marker_genes_all_types <- vector("list", length = nTypes)
   for(i in 1:nTypes){
