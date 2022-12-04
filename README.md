@@ -18,14 +18,6 @@ Agnieszka Geras, A.Geras[at]mini.pw.edu.pl
 
 Ewa Szczurek, szczurek[at]mimuw.edu.pl
 
-Celloscope was developed under:
-
-python v3.10.4  
-scipy v1.7.3  
-numpy v1.23.1  
-pandas v1.4.3  
-multiprocess v0.70.12.2  
-
 # Basic usage
 Celloscope takes as an input the following files provided in `input_data` directory:
 
