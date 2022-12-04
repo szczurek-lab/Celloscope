@@ -1,0 +1,141 @@
+---
+title: ''
+output: html_document
+params:
+  address_input: "~/Celloscope/example/data/"
+  address_results: "~/Celloscope/example/"
+    
+    
+---
+
+```{r, echo=FALSE}
+library(stringr)
+library(data.table)
+library(ggplot2)
+library(grid)
+library(gridExtra)
+
+```
+
+```{r, echo=FALSE}
+
+source("~/Celloscope/code/functions.R")
+
+
+```
+
+
+```{r, echo=FALSE}
+
+address_data<- paste0(params$address_input)
+address_results <- paste0(params$address_results)
+
+nr_of_chains <- length(list.files(address_results))
+
+
+
+###################################################################
+C_gs <- read.csv( paste0(address_data, "/C_gs.csv")  )
+C_gs  <- C_gs[-1]
+koor<- colnames(C_gs)
+nSpots <- ncol(C_gs)
+
+koordynaty <- koor
+
+res <- str_split(koordynaty, "x")
+
+x <- sapply(res, function(z) z[1])
+y <- as.numeric(sapply(res, function(z) z[2]))
+x <- as.numeric(sapply(x,  function(z) substring(z, 2)))
+
+#plot(x,y)
+
+B <-  read.csv( paste0(address_data, "/matB.csv"))
+typy <- colnames(B)[-1]
+
+typy[length(typy)] <- "Dummy type"
+nTypes <- length(typy)
+nGenes <- nrow(B)
+#####################################################################
+
+
+chains <- list.files(address_results)
+print(chains)
+lista_h_results <- vector("list", nr_of_chains)
+
+for(i in 1:nr_of_chains){
+  est_thetas <- t(read.csv(paste0(address_results, chains[i]  ,"/thetas_est.csv"), head=FALSE))
+  lista_h_results[[i]]  <- est_thetas/rowSums(est_thetas)
+
+}
+
+
+h <- 0
+for(i in 1:length(lista_h_results)){
+  h <- h + lista_h_results[[i]]
+}
+
+
+h_all <- h/rowSums(h)
+
+```
+
+
+
+
+
+```{r, fig.width=2, fig.height=2, echo=FALSE}
+
+
+for(i in 1:nTypes) print(tworz_ramke(h_all,-y,x, i))
+```
+
+
+### Trace plots (spots)
+
+```{r, echo=FALSE}
+splitdf <- function(df, n) {
+  indx <- matrix(seq_len(ncol(df)), ncol = n)
+  lapply(seq_len(n), function(x) df[, indx[, x]])
+}
+
+my_colors <- c("pink", "green", "orange", "blue", "magenta")
+
+rysuj_spot <- function(spot_nr, nTypes, list_h){
+
+  lista_spot <- vector("list", nTypes)
+
+
+  for(j in 1:nTypes) {
+    plot( list_h[[1]][[spot_nr]][,j], ylim=c(0,0.5) , main=typy[j], type="l" )
+    for(k in 2:nr_of_chains){
+      points(list_h[[k]][[spot_nr]][,j], col=my_colors[k-1], type="l")
+    }
+  }
+}
+
+
+list_h <- vector("list", nr_of_chains)
+for(i in 1:nr_of_chains ) list_h[[i]] <- as.data.frame(fread(paste0(address_results, chains[i], "//result_h.csv")))
+
+list_h  <- lapply(list_h , function(x)  splitdf(x, nSpots) )
+
+
+
+```
+
+
+
+```{r, echo=FALSE, fig.width=3, fig.height=2}
+
+
+par(  oma = c(2,1,0,0) + 0.1,
+          mar = c(1,1,1,1) + 0.1)
+
+for(i in 1:3){
+  print(paste("spot", i))
+  rysuj_spot(i, nTypes, list_h)
+}
+
+```
+
