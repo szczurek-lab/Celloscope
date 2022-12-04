@@ -87,7 +87,7 @@ h_all <- h/rowSums(h)
 ```{r, fig.width=2, fig.height=2, echo=FALSE}
 
 
-for(i in 1:nTypes) print(tworz_ramke(h_all,-y,x, i))
+for(i in 1:nTypes) print(tworz_ramke(h_all,y,-x, i))
 ```
 
 
