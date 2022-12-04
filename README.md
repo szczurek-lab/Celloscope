@@ -45,8 +45,6 @@ The arguments of the bash script:
 * `results` - directory dedicated for results.
 * `number_of_chains` - number of independent chains to run
 
-Celloscope gives as an output the estimates for the cell type proportions across as a spots vs. types matrix  in the file `h_est.csv` that can be found in `results` directory.
-
 Examplificatory input files can be found in this resposotory, in the `example` directory. 
 
 Please see the manual for the details on how to prepare data and guidance how to visualize results.
