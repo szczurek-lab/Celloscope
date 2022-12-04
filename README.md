@@ -51,9 +51,8 @@ Please see the manual for the details on how to prepare data and guidance how to
 
 # Repository content
 
-* `markers` - files containing marker genes used in the analysis described in the paper (Additional File 2 and Additional File 3) and marker genes for the example from the manual,
 * `data` - data used for the analysis presented in the papaer (ST data from mouse brain and human prostate and estimates for the number of cells for each spot),
 * `code` - model's implementation,
 * `example` - examplificatory input files ready to run on Celloscope,
 * `manual` explaining the details how to prepare data, run the model and visualise results,
-* `comparison` - code used to perform comparison to preceding aproaches
+* `comparison` - code used to perform comparison to preceding aproaches.
