@@ -1,0 +1,9 @@
+C_gs.csv contains gene expression for spots annotated by a pathologist as an inflamation.
+Columns starting with 
+A refer to sample: P13
+B refer to sample: P24
+C refer to sample: P23
+D refer to sample: P31
+E refer to sample: P33
+F refer to sample: P42
+from Berglund et al., Spatial maps of prostate cancer transcriptomes reveal an unexplored landscape of heterogeneity, Nat Comm 2018.
