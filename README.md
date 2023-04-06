@@ -21,10 +21,10 @@ Ewa Szczurek, szczurek[at]mimuw.edu.pl
 # Basic usage
 Celloscope takes as an input the following files provided in `input_data` directory:
 
-* `param.txt` - file containing run setting (values for hyperparameters, number of iterations etc.),
-* `matB.csv` - binary matrix with prior knowledge on marker genes,
+* `param.txt` - file containing run setting (hyperparameters, number of iterations etc.),
+* `matB.csv` - binary matrix with prior knowledge about marker genes,
 * `C_gs.csv` - gene expression data,
-* `n_cells.csv` - estimates for the number of cells in each spot.
+* `n_cells.csv` - estimates for the number of cells in each ST spot.
 
 Celloscope can be run from the `code` directory as follows:
 
