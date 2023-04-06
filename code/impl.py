@@ -324,7 +324,7 @@ def Celloscope(a_data, a_results, how_many_chains):
         how_many = B.sum(axis=1)
         ind = np.array(B, dtype=bool)
         
-        n_cells = pd.read_csv(address_data +   'n_cells.csv')
+        n_cells = pd.read_csv(address_data +   '/n_cells.csv')
         n_cells = n_cells['cellCount'].to_numpy().flatten()
     
         prior_lambdas = np.apply_along_axis(lambda v: np.mean(v[v!=0]), 1, C)
