@@ -1,6 +1,6 @@
 # Celloscope
 
-This is the directory containing the source code necessary to reproduce analyses presented in the manuscript:  
+This directory contains the source code necessary to reproduce analyses presented in the manuscript:  
 
 > **Celloscope: a probabilistic model for marker-gene-driven cell type deconvolution in spatial transcriptomics data**  
 > Agnieszka Geras, Shadi Darvish Shafighi, Kacper Domżał, Igor Filipiuk,  Łukasz Rączkowski, Hosein Toosi, Leszek Kaczmarek,  Łukasz Koperski, Jens Lagergren, Dominika Nowis and Ewa Szczurek
