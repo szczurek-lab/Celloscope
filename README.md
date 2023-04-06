@@ -24,7 +24,7 @@ Celloscope takes as input the following files provided in the `input_data` direc
 * `param.txt` - file containing run setting (hyperparameters, number of iterations, etc.),
 * `matB.csv` - binary matrix with prior knowledge about marker genes,
 * `C_gs.csv` - gene expression data,
-* `n_cells.csv` - estimates of the number of cells in each ST spot.
+* `n_cells.csv` - estimates for the number of cells in each ST spot.
 
 Celloscope can be run from the `code` directory as follows:
 
@@ -39,7 +39,7 @@ The arguments of the bash script:
 
 Exemplary input files can be found in this repository in the `example` directory. 
 
-Please see the manual for the details on how to prepare data and guidance on visualising results.
+Please see the manual for the details on preparing data and guidance on visualising results.
 
 # Repository content
 
@@ -47,4 +47,4 @@ Please see the manual for the details on how to prepare data and guidance on vis
 * `code` - model's implementation,
 * `example` - exemplary input files ready to run on Celloscope,
 * `manual` explaining the details of how to prepare data, run the model, and visualize results,
-* `comparison` - code used to perform a comparison to preceding approaches.
+* `comparison` - code used to compare to preceding approaches.
