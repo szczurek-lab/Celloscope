@@ -42,11 +42,15 @@ nSpots <- ncol(C_gs)
 
 koordynaty <- koor
 
-res <- str_split(koordynaty, "x")
+#res <- str_split(koordynaty, "x")
 
-x <- sapply(res, function(z) z[1])
-y <- as.numeric(sapply(res, function(z) z[2]))
-x <- as.numeric(sapply(x,  function(z) substring(z, 2)))
+#x <- sapply(res, function(z) z[1])
+#y <- as.numeric(sapply(res, function(z) z[2]))
+#x <- as.numeric(sapply(x,  function(z) substring(z, 2)))
+xy <- str_extract_all(koordynaty, "[0-9]+")
+lista <- lapply(xy, as.numeric)
+x <- as.numeric(sapply(lista, function(z) z[[1]]))
+y <- as.numeric(sapply(lista, function(z) z[[2]]))
 
 #plot(x,y)
 

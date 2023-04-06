@@ -64,7 +64,7 @@ tworz_ramke <- function(h, x, y, type_nr){
   marginesy <- c(0, 0.01, -0.5, -0.5)
   #if ( type_nr %in% c(4,8,12,16)) marginesy <- c(0, 0.03, -0.5, -0.5)
   
-  ggplot(df, aes(x =x, y = y)) + geom_point(aes(color =frequency), size =1.8) +
+  ggplot(df, aes(x =x, y = -y)) + geom_point(aes(color =frequency), size =1.8) +
     scale_color_gradientn(colors =kolory, breaks=c(0.2,0.4,  0.6, 0.8,  1),  limits=c(0,1), labels = c("0.2","0.4", "0.6", "0.8",  "1")) +
     theme_bw() + labs(x = "", y="") +   ggtitle(typy[type_nr])+
     theme(plot.title = element_text(size=8, hjust = 0, vjust =-2 ), legend.position = "right", legend.key.width=unit(0.4,"cm"),
