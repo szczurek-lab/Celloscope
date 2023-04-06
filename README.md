@@ -1,5 +1,4 @@
 # Celloscope
-Celloscope: a probabilistic model for marker-gene-driven cell type deconvolution in spatial transcriptomics data
 
 This is the directory containing the source code necessary to reproduce analyses presented in the manuscript:  
 
