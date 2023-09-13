@@ -2,12 +2,10 @@
 
 This directory contains the source code necessary to reproduce analyses presented in the manuscript:  
 
-> **Celloscope: a probabilistic model for marker-gene-driven cell type deconvolution in spatial transcriptomics data**  
-> Agnieszka Geras, Shadi Darvish Shafighi, Kacper Domżał, Igor Filipiuk, Alicja Rączkowska, Paulina Szymczak, Hosein Toosi, Leszek Kaczmarek,  Łukasz Koperski, Jens Lagergren, Dominika Nowis and Ewa Szczurek
+> Agnieszka Geras, Shadi Darvish Shafighi, Kacper Domżał, Igor Filipiuk, Alicja Rączkowska, Paulina Szymczak, Hosein Toosi, Leszek Kaczmarek,  Łukasz Koperski, Jens Lagergren, Dominika Nowis and Ewa Szczurek.            
+> **Celloscope: a probabilistic model for marker-gene-driven cell type deconvolution in spatial transcriptomics data.** Genome Biol 24, 120 (2023). https://doi.org/10.1186/s13059-023-02951-8
 
-The preprint version of the manuscript can be found [here](https://www.biorxiv.org/content/10.1101/2022.05.24.493193v1).
-
-Cell counting procedure is [here](https://github.com/szczurek-lab/qupath-spot-utils).
+Cells counting procedure is [here](https://github.com/szczurek-lab/qupath-spot-utils).
 
 **Questions about the implementation and general questions:**
 
