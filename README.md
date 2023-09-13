@@ -3,7 +3,7 @@
 This directory contains the source code necessary to reproduce analyses presented in the manuscript:  
 
 > **Celloscope: a probabilistic model for marker-gene-driven cell type deconvolution in spatial transcriptomics data**  
-> Agnieszka Geras, Shadi Darvish Shafighi, Kacper Domżał, Igor Filipiuk,  Łukasz Rączkowski, Paulina Szymczak, Hosein Toosi, Leszek Kaczmarek,  Łukasz Koperski, Jens Lagergren, Dominika Nowis and Ewa Szczurek
+> Agnieszka Geras, Shadi Darvish Shafighi, Kacper Domżał, Igor Filipiuk, Alicja Rączkowska, Paulina Szymczak, Hosein Toosi, Leszek Kaczmarek,  Łukasz Koperski, Jens Lagergren, Dominika Nowis and Ewa Szczurek
 
 The preprint version of the manuscript can be found [here](https://www.biorxiv.org/content/10.1101/2022.05.24.493193v1).
 
